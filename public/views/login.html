@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/login_register.css">
     <link rel="stylesheet" type="text/css" href="public/styles/login.css">
     <title>Login</title>
+    <?php include __DIR__ . '/layouts/header.php'; ?>
 </head>
 <body>
-    <form action="/login" method="POST">
-        <h1>Login</h1>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Enter email" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter password" required>
-        <br>
-        <button type="submit">Login</button>
+<div class="cover_trick_image" aria-hidden="true"></div>
+<div id="form-column">
+    <div class="logo-container">
+        <img src="public/assets/images/logo_spotczek.svg" alt="Logo Spotczek">
+        <span class="logo-text">SPOTCZEK</span>
+    </div>
+    <form class="space-y-6">
+        <div>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" placeholder="Email"
+                   class="w-full px-4 py-3 rounded-md bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+        </div>
+        <div>
+            <label for="password" class="sr-only">Hasło</label>
+            <input type="password" id="password" placeholder="Hasło"
+                   class="w-full px-4 py-3 rounded-md bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+            <div class="text-right mt-1">
+                <button type="button" class="text-green-500 text-sm hover:underline">Pokaż</button>
+            </div>
+        </div>
+
+        <!-- Login button -->
+        <button type="submit"
+                class="w-full py-3 bg-green-500 text-white font-semibold rounded-3xl hover:bg-green-600 transition-colors">
+            Zaloguj się
+        </button>
+
+        <!-- Forgot password -->
+        <div class="text-center mt-4">
+            <a href="#" class="text-green-500 text-sm hover:underline">Nie pamiętam hasła</a>
+        </div>
     </form>
+</div>
 </body>
 </html>

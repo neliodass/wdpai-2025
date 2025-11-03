@@ -1,7 +1,19 @@
-h1 {
-    color: blue;
+:root {
+    --cream: #DAD1C2;
+    --green2: #469B4C;
+    --gray3: #3F4040;
 }
 body{
     height: 100vh;
     margin:0;
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #2B2A25 url('../assets/images/papercut_background.png') repeat left top;
+    background-size: auto;
+    pointer-events: none;
+    z-index: -1;
 }
